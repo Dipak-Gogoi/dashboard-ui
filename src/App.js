@@ -3,6 +3,7 @@ import './App.css';
 import SideMenu from "./component/Navbar/SideMenu";
 import Sidebar from './component/Navbar/Sidebar';
 import Topbar from './component/Navbar/Topbar';
+import AllContents from './component/Projects/AllContents';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <Topbar />
         <SideMenu />
         <Switch>
-          <Route>
+          <Route exact path='/'>
+            <AllContents />
           </Route>
         </Switch>
       </Router>
