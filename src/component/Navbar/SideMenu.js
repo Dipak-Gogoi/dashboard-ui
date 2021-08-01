@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { HomeFilled, ArrowRightOutlined, ArrowLeftOutlined } from '@ant-design/icons';
+import React, { useState } from 'react';
+import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import MenuItem from './MenuItem';
 
 
 const menuItems = [
-    { name: 'Dashboard', exact: true, to: '/', iconClassName: 'bi bi-person' },
-    { name: 'Campaigns', exact: true, to: '/campaigns', iconClassName: 'bi bi-journal-medical' },
-    { name: 'Clients', exact: true, to: '/clients', iconClassName: 'bi bi-gear' },
-    { name: 'Analytics', exact: true, to: '/analytics', iconClassName: 'bi bi-gear' },
-    { name: 'Reports', exact: true, to: '/reports', iconClassName: 'bi bi-gear' },
-    { name: 'Calendar', exact: true, to: '/calendar', iconClassName: 'bi bi-gear' },
-    { name: 'Support', exact: true, to: '/support', iconClassName: 'bi bi-gear' },
+    { name: 'Dashboard', exact: true, to: '/', img: './images/Home.svg' },
+    { name: 'Campaigns', exact: true, to: '/campaigns', img: './images/Campaigns.svg' },
+    { name: 'Clients', exact: true, to: '/clients', img: './images/Clients.svg' },
+    { name: 'Analytics', exact: true, to: '/analytics', img: './images/Analytics.svg' },
+    { name: 'Reports', exact: true, to: '/reports', img: './images/Reports.svg' },
+    { name: 'Calendar', exact: true, to: '/calendar', img: './images/Calendar.svg' },
+    { name: 'Support', exact: true, to: '/support', img: './images/Support.svg' },
 ]
 
-const SideMenu = () => {
+const SideMenu = (props) => {
     const [inActive, setInActive] = useState(true);
 
 
@@ -23,7 +23,7 @@ const SideMenu = () => {
 
 
     return (
-        <div className={`side-menu ${inActive ? 'inactive' : ''}`}>
+        <div className={`side-menu ${inActive ? '' : 'inactive'}`}>
             <div className='main-menu'>
                 <ul>
                     {
@@ -32,7 +32,7 @@ const SideMenu = () => {
                                 key={index}
                                 name={menuItem.name}
                                 exact={menuItem.exact}
-                                iconName={menuItem.iconClassName}
+                                img={menuItem.img}
                                 to={menuItem.to}
 
                             />
@@ -40,7 +40,7 @@ const SideMenu = () => {
                     }
                 </ul>
                 <div className='toggle-menu-btn' onClick={toggleButtom}>
-                    {inActive ? (<ArrowRightOutlined />) : (<ArrowLeftOutlined />)}
+                    {inActive ? (<LeftOutlined />) : (<RightOutlined />)}
                 </div>
             </div>
         </div>

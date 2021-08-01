@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Sidebar = () => {
     return (
@@ -16,10 +16,14 @@ const Sidebar = () => {
             <img src='./images/Ellipse 10.svg' alt='' />
             <img src='./images/Ellipse 12.svg' alt='' />
             <div className='bottom-icon-add'>
-                <img src='./images/+.svg' alt='' />
+                <div className='bottom-icon-add-icon'>
+                    <img src='./images/Add.svg' alt='' />
+                </div>
             </div>
             <div className='bottom-icon-setting'>
-                <img src='./images/Vector.svg' alt='' />
+                <div className='bottom-icon-setting-icon'>
+                    <img src='./images/Settings.svg' alt='' />
+                </div>
             </div>
         </div>
     )

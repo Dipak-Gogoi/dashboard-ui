@@ -47,7 +47,7 @@ const AllProjects = () => {
                     <Card style={{ width: 214, marginRight: '15.3px' }} className={classes['all-project-card-body']}>
                         <div className={classes['all-projects-card-header']} style={{ color: '#4D34D7' }}>
                             <div className={classes.dot} style={{ background: '#4D34D7' }}></div>
-                            <p>6 hours left</p>
+                            <p>3 days left</p>
                         </div>
                         <div className={classes['all-projects-cards-title']}>
                             <img src='./images/Ellipse 3.svg' alt='' />

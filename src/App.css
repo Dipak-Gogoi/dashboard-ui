@@ -30,10 +30,13 @@ body {
   margin-top: 75px;
 }
 
-.side-bar .bottom-icon-add img {
-  margin-left: 25px;
+.side-bar .bottom-icon-add-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 14px;
   height: 14.87px;
+  margin: 10px 0 10px 25px;
 }
 
 .side-bar .bottom-icon-setting {
@@ -42,10 +45,15 @@ body {
   border-top: 0.5px solid #9485E7;
 }
 
-.side-bar .bottom-icon-setting img {
+.side-bar .bottom-icon-setting-icon {
   height: 16px;
   width: 16px;
   margin-left: 24px;
+}
+
+.side-bar .bottom-icon-setting img {
+  width: 100%;
+  /*  */
 }
 
 ul {
@@ -73,15 +81,19 @@ li {
 }
 
 .side-menu .main-menu {
-  margin: 5px 0;
   position: relative;
+  margin-top: 52px;
 }
 
 .side-menu .main-menu .menu-item {
-  color: rgb(8, 63, 85);
+  color: #6E7191;
   text-decoration: none;
-  font-size: 18px;
-  padding: 25px 10px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+  padding: 8.5px 10px;
   display: block;
   font-weight: 600;
   cursor: pointer;
@@ -89,15 +101,15 @@ li {
 }
 
 .side-menu .main-menu .menu-item.active {
-  background: #c7dbff;
-  border-left: 3px solid #5891fa;
-  color: black;
+  background: #F3F1FF;
+  border-radius: 12px;
+  color: #4D34D7;
 }
 
 .side-menu.inactive .main-menu .menu-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   font-size: 24px;
 }
 
@@ -134,7 +146,6 @@ li {
   /* font-size: 20px; */
   padding: 30px 20px;
   position: absolute;
-  top: 50%;
   right: -10px;
   transform: translateY(-50%);
   cursor: pointer;
@@ -145,12 +156,11 @@ li {
 }
 
 .container {
-  margin-left: 240px;
   transition: margin-left .2s ease-in;
 }
 
 .container.inactive {
-  margin-left: 110px;
+  width: 100%;
 }
 
 .top-bar {
@@ -158,16 +168,15 @@ li {
   height: 64px;
   display: flex;
   align-items: center;
-  /* color: #0000; */
   background-color: #FCFCFC;
 }
 
 .logo-icon {
-  margin-left: 100px;
+  margin-left: 73px;
 }
 
 .search-input {
-  margin-left: 215px;
+  margin-left: 110px;
   margin-top: 5px;
   position: relative;
 }
@@ -189,6 +198,7 @@ li {
   top: 50%;
   left: 5%;
   transform: translate(-50%, -50%);
+  color: #6E7191;
 }
 
 .star {
@@ -204,7 +214,7 @@ p {
 
 .star p {
   margin-left: 10px;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -220,7 +230,7 @@ p {
 
 .at p {
   margin-left: 10px;
-  font-family: Noto Sans TC;
+  font-family: 'Noto Sans TC', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -237,7 +247,6 @@ p {
 .create-button Button {
   width: 144px;
   height: 36px;
-  padding: 8px;
   border-radius: 6px;
   border: none;
   color: #fff;
@@ -246,7 +255,6 @@ p {
 }
 
 .create-button p {
-  font-family: Noto Sans TC;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -260,6 +268,7 @@ p {
 .notification {
   margin-left: 100px;
   position: relative;
+  cursor: pointer;
 }
 
 .notification button {
@@ -274,7 +283,7 @@ p {
 }
 
 .notification button p {
-  font-family: Noto Sans TC;
+  font-family: 'Noto Sans TC', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -291,7 +300,6 @@ p {
 
 .user p {
   width: 108px;
-  /* height: 26px; */
   margin-left: 8px;
   font-family: Noto Sans TC;
   font-style: normal;

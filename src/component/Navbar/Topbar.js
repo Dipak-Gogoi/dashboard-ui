@@ -6,11 +6,11 @@ const Topbar = () => {
     return (
         <div className='top-bar'>
             <div className='logo-icon'>
-                logo
+                <img src='./images/briidge-logo.png' alt='' />
             </div>
             <div className='search-input'>
-                <SearchOutlined className='search-icon' />
                 <Input placeholder='Search' />
+                <SearchOutlined className='search-icon' />
             </div>
             <div className='star'>
                 <StarOutlined className='star-icon' />

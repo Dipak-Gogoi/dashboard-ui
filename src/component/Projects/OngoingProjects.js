@@ -1,13 +1,11 @@
 import React from 'react';
 import { Card } from 'antd';
-import { ExclamationCircleOutlined, DownOutlined, MoreOutlined, MenuOutlined, CheckOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { ExclamationCircleOutlined, UpOutlined, DownOutlined, MoreOutlined, MenuOutlined, CheckOutlined, ClockCircleOutlined } from '@ant-design/icons';
 import classes from './OngoingProjects.module.css';
+import MoreOngoingProjects from './MoreOngoingProjects';
 
-const OngoingProjects = () => {
+const OngoingProjects = (props) => {
 
-    const handleClick = () => {
-        console.log('click')
-    }
 
     return (
         <div className={classes['projects-card-content']}>
@@ -16,9 +14,17 @@ const OngoingProjects = () => {
                     <p> Ongoing Projects</p>
                     <ExclamationCircleOutlined className={classes['header-icon']} />
                 </div>
-                <div className={classes['project-header-sub-two']} onClick={handleClick}>
-                    <p>See all</p>
-                    <DownOutlined />
+                <div className={classes['project-header-sub-two']} onClick={props.handleClick}>
+                    {props.openMoreProjects ? (
+                        <>
+                            <p>See less</p>
+                            <UpOutlined />
+                        </>
+                    ) : (
+                            <>
+                                <p>See all</p><DownOutlined />
+                            </>
+                        )}
                 </div>
             </div>
             <div className={classes['project-card']}>
@@ -107,6 +113,7 @@ const OngoingProjects = () => {
                     </div>
                 </Card>
             </div>
+            {props.openMoreProjects ? <MoreOngoingProjects /> : ''}
         </div>
     )
 }
